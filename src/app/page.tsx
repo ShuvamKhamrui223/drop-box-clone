@@ -1,3 +1,5 @@
+import { SignInButton } from "@clerk/nextjs";
+
 export default function Home() {
   return (
     <section className="flex flex-col gap-8 justify-center items-center min-h-[80vh]">
@@ -10,9 +12,11 @@ export default function Home() {
         file infrastructure.
       </p>
 
-      <button className="text-xl bg-blue-500 text-white px-8 py-3 rounded cursor-pointer capitalize active:scale-95 transition-transform duration-100">
-        get started
-      </button>
+      <SignInButton oauthFlow="popup">
+        <button className="text-xl bg-blue-500 text-white px-8 py-3 rounded cursor-pointer capitalize active:scale-95 transition-transform duration-100">
+          get started
+        </button>
+      </SignInButton>
     </section>
   );
 }
